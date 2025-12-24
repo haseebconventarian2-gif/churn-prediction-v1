@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Churn Predictor</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width:700px; margin:40px auto; }
+      label { display:block; margin-top:8px }
+      input[type=text] { width:100%; padding:8px }
+      .btn { margin-top:12px; padding:8px 12px }
+      .result { margin-top:20px; padding:12px; border:1px solid #ddd; background:#f9f9f9 }
+    </style>
+  </head>
+  <body>
+    <h1>Customer Churn Predictor</h1>
+    <p>Enter a `customerID` (e.g. `1024-GUALD`) and click Predict.</p>
+    <form method="post">
+      <label for="customer_id">Customer ID</label>
+      <input type="text" id="customer_id" name="customer_id" placeholder="Enter customerID">
+      <button class="btn" type="submit">Predict</button>
+    </form>
+
+    {% if message %}
+      <div class="result"><strong>{{ message }}</strong></div>
+    {% endif %}
+
+    {% if prediction %}
+      <div class="result">
+        <p><strong>Prediction:</strong> {{ prediction }}</p>
+        {% if probability is not none %}
+          <p><strong>Probability (positive):</strong> {{ '%.3f'|format(probability) }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </body>
+</html>

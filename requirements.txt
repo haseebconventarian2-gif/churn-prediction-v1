@@ -1,0 +1,10 @@
+pandas==2.1.2
+numpy==1.26.4
+scikit-learn==1.4.2
+imbalanced-learn==0.14.1
+pyyaml==6.0
+matplotlib==3.8.1
+seaborn==0.13.2
+fastapi==0.101.1
+uvicorn==0.23.1
+python-multipart==0.0.6

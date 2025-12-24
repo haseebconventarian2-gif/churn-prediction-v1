@@ -1,0 +1,48 @@
+columns:
+  - customerID: {}
+  - gender: {}
+  - SeniorCitizen: {}
+  - Partner: {}
+  - Dependents: {}
+  - tenure: {}
+  - PhoneService: {}
+  - MultipleLines: {}
+  - InternetService: {}
+  - OnlineSecurity: {}
+  - OnlineBackup: {}
+  - DeviceProtection: {}
+  - TechSupport: {}
+  - StreamingTV: {}
+  - StreamingMovies: {}
+  - Contract: {}
+  - PaperlessBilling: {}
+  - PaymentMethod: {}
+  - MonthlyCharges: {}
+  - TotalCharges: {}
+  - Churn: {}
+
+# Columns used by data_transformation.get_preprocessor
+num_features:
+  - SeniorCitizen
+  - tenure
+  - MonthlyCharges
+  - TotalCharges
+
+categorical_features:
+  - customerID
+  - gender
+  - Partner
+  - Dependents
+  - PhoneService
+  - MultipleLines
+  - InternetService
+  - OnlineSecurity
+  - OnlineBackup
+  - DeviceProtection
+  - TechSupport
+  - StreamingTV
+  - StreamingMovies
+  - Contract
+  - PaperlessBilling
+  - PaymentMethod
+  # Note: 'Churn' is the target column and should NOT be listed here
