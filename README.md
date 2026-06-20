@@ -15,6 +15,14 @@ Telco customer churn prediction system with exploratory analysis, modular ML pip
 
 Telco customer churn prediction system with exploratory analysis, modular ML pipelines, and a FastAPI web application.
 
+## 📖 The Story
+
+This repository captures an earlier chapter of the Telco churn project: the move from exploratory analysis toward a modular prediction system. The goal was to turn notebook discoveries into code that could be rerun, tested, and eventually served to an application.
+
+The project separates ingestion, validation, transformation, training, evaluation, and prediction concerns. Configuration files describe the expected data, saved artifacts connect training to inference, and FastAPI provides a simple way to test the resulting model through a browser.
+
+As a version-one implementation, it is valuable because the architecture is visible and approachable. The next iteration can remove duplicated folders, add tests and experiment tracking, and compare the pipeline against the newer churn repository.
+
 ## Highlights
 
 - Exploratory data analysis
@@ -98,4 +106,5 @@ This is a learning and reference implementation. Review security, validation, mo
 - Define retention and privacy controls for audio and customer data.
 
 > This README reflects the current codebase. External AI, telephony, and messaging features require their respective accounts, assets, and approvals.
+
 
