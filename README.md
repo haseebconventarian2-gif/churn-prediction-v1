@@ -24,7 +24,7 @@ Telco customer churn prediction system with exploratory analysis, modular ML pip
 
 ## Tech Stack
 
-Python · pandas · scikit-learn · imbalanced-learn · FastAPI
+Python Â· pandas Â· scikit-learn Â· imbalanced-learn Â· FastAPI
 
 ## Getting Started
 
@@ -56,70 +56,46 @@ uvicorn web_app_fastapi:app --reload
 
 This is a learning and reference implementation. Review security, validation, monitoring, and deployment settings before production use.
 
-<!-- code-audit-details -->
+## Detailed Code Reference
 
-## 🔄 Runtime Flow
+**Runtime flow:** `Dataset -> validation -> transformation -> training -> evaluation -> artifacts -> API`
 
-`Dataset → validation → transformation → training → evaluation → artifacts → prediction API`
+### Repository map
 
-This flow is derived from the current entry points and service calls.
+- `__pycache__/` - supporting package or resources
+- `api/` - supporting package or resources
+- `components/` - supporting package or resources
+- `config/` - supporting package or resources
+- `config - Copy/` - supporting package or resources
+- `configuration/` - supporting package or resources
+- `constants/` - supporting package or resources
+- `entity/` - supporting package or resources
+- `experiments/` - supporting package or resources
+- `main.py` - project file
+- `pipeline/` - supporting package or resources
+- `README.md` - project file
+- `requirements.txt` - project file
+- `scripts/` - supporting package or resources
+- `Telco_Churn_EDA.ipynb` - project file
+- `templates/` - supporting package or resources
+- `WA_Fn-UseC_-Telco-Customer-Churn.csv` - project file
+- `web_app_fastapi.py` - project file
 
-## 🗂 Code Map
-
-| Path | Responsibility |
-| --- | --- |
-| `__pycache__/` | Supporting resource |
-| `api/` | Supporting resource |
-| `components/` | Supporting resource |
-| `config/` | Supporting resource |
-| `config - Copy/` | Supporting resource |
-| `configuration/` | Supporting resource |
-| `constants/` | Supporting resource |
-| `entity/` | Supporting resource |
-| `experiments/` | Supporting resource |
-| `main.py` | Application entry point |
-| `pipeline/` | Supporting resource |
-| `requirements.txt` | Python dependencies |
-| `scripts/` | Supporting resource |
-| `templates/` | Supporting resource |
-| `web_app_fastapi.py` | Prediction web application |
-
-## 🔐 Environment Variables
-
-No environment-variable reads were detected.
-
-## 🌐 Detected API Routes
-
-| Method | Endpoint |
-| --- | --- |
-| `GET` | `/` |
-| `GET` | `/health` |
-| `GET` | `/media/{media_id}` |
-| `GET` | `/webhook` |
-| `GET` | `/whatsapp/diagnose` |
-| `POST` | `/audio` |
-| `POST` | `/predict` |
-| `POST` | `/text` |
-| `POST` | `/webhook` |
-| `POST` | `/whatsapp/push` |
-
-## 🧪 Validation Guide
+### Validation checklist
 
 1. Install dependencies in a clean virtual environment.
-2. Start the documented entry point and test the root or health route.
-3. Exercise one valid and one invalid request.
-4. Verify external-service errors are handled clearly.
-5. Confirm secrets, private data, indexes, and model artifacts are ignored.
+2. Configure only the environment variables needed by enabled integrations.
+3. Start the documented entry point and test its health or root route.
+4. Exercise successful and invalid requests.
+5. Confirm secrets, private datasets, indexes, and model artifacts are ignored.
 
-## 🔒 Production Checklist
+### Production checklist
 
-- Use managed secret storage and rotate exposed credentials.
+- Use managed secret storage.
 - Add authentication, authorization, rate limiting, and request-size limits.
-- Add automated tests, structured logging, monitoring, and health checks.
+- Add automated tests, structured logs, monitoring, and health checks.
 - Pin and audit dependencies.
 - Define retention and privacy controls for audio and customer data.
 
-## ⚠️ Code-Audit Notes
+> This README reflects the current codebase. External AI, telephony, and messaging features require their respective accounts, assets, and approvals.
 
-- Documentation reflects the current repository code and may expose integrations that need separate cloud accounts, model assets, or channel approval.
-- Treat the project as a reference implementation until its security and deployment configuration are hardened.
